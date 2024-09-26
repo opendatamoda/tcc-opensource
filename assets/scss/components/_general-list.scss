@@ -1,0 +1,71 @@
+.general-list {
+  &.general-list--white {
+    background-color: $color-white;
+    padding: 1rem;
+    .general-list-item {
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+  .general-list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $border-color;
+    &:has(.general-list-item-subinfo) {
+      flex-direction: row;
+      justify-content: space-between;
+      @media screen and (max-width: nth($breakpoint, 1)) {
+        // flex-direction: column;
+        gap: 1rem;
+      }
+      .general-list-item-subinfo {
+        flex-basis: 10rem;
+        text-align: right;
+        color: darken($color-gray, 20%);
+        @media screen and (max-width: nth($breakpoint, 1)) {
+          flex-basis: auto;
+        }
+        svg {
+          width: 2.5rem;
+          height: 2.5rem;
+          path {
+            fill: $color-primary;
+          }
+        }
+      } 
+    }
+  }
+  .general-list-item-maininfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .general-list-item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3px;
+  }
+  .general-list-item-content {
+    font-size: 0.875rem;
+    color: darken($color-gray, 20%);
+  }
+  .general-list-item-footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: darken($color-gray, 20%);
+    .award {
+      width: auto;
+      height: 1rem;
+      position: relative;
+      top: 0.125rem;
+    }
+  }
+}

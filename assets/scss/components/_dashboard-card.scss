@@ -1,0 +1,30 @@
+.dashboard-card {
+  padding: 0.625rem;
+  background-color: $color-secondary;
+  border-radius: 0.625rem;
+  .dashboard-card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboard-card-title {
+    color: $color-white;
+    font-size: 0.875rem;
+  }
+  .dashboard-card-icon {
+    svg {
+      path {
+        fill: rgba($color-white, 0.6);
+      }
+    }
+  }
+  .dashboard-card-number {
+    color: $color-white;
+    font-size: 2rem;
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      font-size: 1.5rem;
+    }
+  }
+  .dashboard-card-container {
+    text-align: right;
+  }
+}

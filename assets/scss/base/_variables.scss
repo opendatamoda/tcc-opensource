@@ -1,0 +1,27 @@
+// *************************************
+//
+//  Variables
+//  ~bp-a11y/src/assets/scss/base/_variables.scss already included, 
+//  You can overwrite it or add new variable below.
+//
+// *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+$color-primary: #FFA800;
+$color-primary-color: #664300; // _piman-overwrite.scss
+$color-secondary: #36558F;
+$color-secondary-color: #36558F;
+$color-bg: #F4F7FA;
+$outline-color: darken($color-visited, 20%);
+$color-visited: #623f92;
+$color-facebook: #3975EA;
+
+// -------------------------------------
+//   Font
+// -------------------------------------
+
+$font-family: "Noto Sans TC", system-ui, Helvetica, Arial, sans-serif;
+$font-size-base: 1rem;

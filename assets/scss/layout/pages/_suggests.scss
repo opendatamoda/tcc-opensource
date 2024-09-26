@@ -1,0 +1,22 @@
+.page--suggests {
+  background: url('@/assets/images/scene-1.svg') left bottom;
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  @media screen and (max-width: nth($breakpoint, 3)) {
+    background-size: 50% auto;
+  }
+  .specialbar-input {
+    padding-left: 0;
+  }
+  .general-list-item-title {
+    button {
+      color: $color-secondary;
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}

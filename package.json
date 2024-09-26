@@ -1,0 +1,35 @@
+{
+  "name": "taichung-city-goverment-open-data-opensource",
+  "version": "1.0.0",
+  "description": "Taichung City Goverment Open Data Website",
+  "author": "Taichung City Goverment Open Data",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0, <20.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "dev": "cross-env nuxt",
+    "build": "nuxt build",
+    "build-testing": "cross-env ENV=testing nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "^0.30.0",
+    "@yasai/piman": "^1.0.0-alpha.36",
+    "echarts": "^5.5.0",
+    "nuxt": "^2.16.3",
+    "vue-countup-v2": "^4.0.0",
+    "vuewordcloud": "^18.7.12"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.16.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "cross-env": "^7.0.3",
+    "sass": "^1.43.4",
+    "sass-loader": "^10.1.1"
+  }
+}

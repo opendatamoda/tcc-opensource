@@ -1,0 +1,69 @@
+.#{$prefix}-btn {
+  &.#{$prefix}-btn--primary {
+    @include bpa-btn-generator(
+      $color-primary-color,
+      $color-primary,
+      $color-primary
+    );
+  }
+  &.#{$prefix}-btn--primary-ghost {
+    color: darken($color-primary, 20%);
+  }
+  &.#{$prefix}-btn--secondary {
+    @include bpa-btn-generator(
+      #fff,
+      $color-secondary,
+      $color-secondary
+    );
+  }
+}
+
+.#{$prefix}-dialog-close-btn.bpa-btn {
+  color: $color-primary-color;
+}
+
+.#{$prefix}-breadcrumb {
+  padding: 0 4rem;
+  @media screen and (max-width: nth($breakpoint, 4)) {
+    padding: 0 1rem;
+  }
+}
+
+.#{$prefix}-accordion {
+  background-color: transparent;
+  .#{$prefix}-accordion__item-container {
+    background-color: transparent;
+  }
+  h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+  }
+}
+
+.#{$prefix}-select-popup {
+  [role='option'] {
+    &.option-checked {
+      color: darken($color-primary, 25%);
+    }
+  }
+}
+
+.#{$prefix}-pagination-group {
+  margin: 1.5rem 0;
+}
+
+.#{$prefix}-msg--primary {
+  .msg-content {
+    color: darken($color-primary, 20%);
+  }
+}
+
+.#{$prefix}-dialog {
+  .#{$prefix}-dialog-box {
+    height: 100dvh;
+  }
+}
+
+.bpa-breadcrumb ol {
+  flex-wrap: wrap;
+}

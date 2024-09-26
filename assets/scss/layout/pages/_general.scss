@@ -1,0 +1,104 @@
+.page {
+  width: 100%;
+  max-width: nth($breakpoint, 5);
+  margin: 0 auto;
+  padding: 0rem 4rem 4rem;
+  @media screen and (max-width: nth($breakpoint, 4)) {
+    padding: 1rem 1rem 4rem;
+  }
+  &.page--narrow {
+    max-width: nth($breakpoint, 3);
+  }
+  .page-title {
+    text-align: center;
+    text-wrap: balance;
+    span {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -1.25rem;
+        left: -1.25rem;
+        width: 2rem;
+        height: 2rem;
+        background: url('@/assets/images/page-title-deco.svg') center center /
+          contain /* position / size */ no-repeat /* repeat */
+          // fixed                    /* attachment */
+          // padding-box              /* origin */
+          // content-box              /* clip */
+          // red; ;
+      }
+    }
+    .award {
+      width: auto;
+      height: 1.5rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.custom-flex {
+  display: flex;
+  word-break: break-all;
+  word-break: break-word;
+  width: 100%;
+  &.custom-flex--2cols {
+    flex-direction: row;
+    gap: 1.5rem;
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      flex-direction: column;
+    }
+    .custom-flex-item--small {
+      flex: inherit;
+      width: 20rem;
+      @media screen and (max-width: nth($breakpoint, 2)) {
+        width: auto;
+        margin-right: inherit;
+      }
+      p {
+        margin-bottom: 0.25rem;
+      }
+    }
+    .custom-flex-item--large {
+      flex: 1;
+    }
+  }
+  .custom-flex-item {
+    &.custom-flex-item--left {
+    }
+    &.custom-flex-item--right {
+    }
+  }
+  .#{$prefix}-accordion__item--open {
+    .#{$prefix}-accordion__item-header {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .#{$prefix}-accordion {
+    .#{$prefix}-accordion__item-container {
+      max-height: 50vh;
+      overflow: auto;
+    }
+  }
+}
+
+.link-to-outside-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  .btn-link-to-outside {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: $color-black;
+    p {
+      font-size: 0.75rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.page--categories {
+  background:
+    url('@/assets/images/scene-1.svg')
+    right 4rem top/ 260px auto /* position / size */
+    no-repeat                /* repeat */
+    // fixed                    /* attachment */
+    // padding-box              /* origin */
+    // content-box              /* clip */
+    // $color-bg;
+    ;
+  @media screen and (max-width: nth($breakpoint, 3)) {
+    background-size: 160px auto;
+    background-position: right 1rem top 3rem;
+  }
+  @media screen and (max-width: nth($breakpoint, 1)) {
+    background-size: 80px auto;
+    background-position: right 1rem top 2.25rem;
+  }
+  .general-list-item {
+    &:has(.general-list-item-subinfo) {
+      .general-list-item-subinfo {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.tag-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  &.tag-list--inline-block {
+    display: flex;
+    .tag-list-item {
+      display: flex;
+      flex-wrap: wrap;
+      &:not(:last-of-type) {
+        &:after {
+          content: '、'
+        }
+      }
+    }
+    a {
+      text-decoration: underline;
+      &.tag {
+        border: 0;
+        font-size: 1rem;
+        padding: 0;
+      }
+    }
+  }
+  a {
+    line-height: 1;
+    display: block;
+  }
+}

@@ -1,0 +1,43 @@
+.page--search {
+  .btn-filter {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      display: block;
+    }
+  }
+  .aside-filter {
+    transition: max-height 300ms ease-in;
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      height: 0;
+      max-height: 0;
+      overflow: hidden;
+    }
+    &.aside-filter--open {
+      height: auto;
+      max-height: 100dvh;
+      overflow: auto;
+      .#{$prefix}-accordion {
+        .#{$prefix}-accordion__item-container {
+          max-height: inherit;
+        }
+      }
+    }
+  }
+  .toolbar {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    .svg-inline--fa {
+      path {
+        fill: $color-secondary;
+      }
+      margin-right: 1rem;
+    }
+  }
+  .list-icon {
+    position: relative;
+    top: 0.125rem;
+  }
+}

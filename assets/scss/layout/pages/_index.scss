@@ -1,0 +1,338 @@
+.page--index {
+  .hero-img {
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      width: 100%;
+      height: 200px;
+    }
+    @media screen and (max-width: nth($breakpoint, 1)) {
+      margin-left: -1rem;
+      width: calc(100% + 2rem);
+    }
+    img {
+      @media screen and (max-width: nth($breakpoint, 2)) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .hero-searchbar {
+    width: 100%;
+    max-width: 60%;
+    margin: -10rem auto 0;
+    padding: 1rem 1rem 0.25rem;
+    background-color: rgba($color-white, 0.8);
+    border-radius: 0.625rem;
+    backdrop-filter: blur(0.25rem);
+    @media screen and (max-width: nth($breakpoint, 3)) {
+      margin-top: -5rem;
+    }
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      max-width: 100%;
+    }
+  }
+  .slogan {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-wrap: balance;
+    @media screen and (max-width: nth($breakpoint, 3)) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: nth($breakpoint, 1)) {
+      font-size: 1.25rem;
+      letter-spacing: 0rem;
+    }
+  }
+  .index-section-slogan {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    svg {
+      path {
+        fill: $color-secondary;
+      }
+    }
+  }
+  .dashboard-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(20% - 2rem), 1fr));
+    gap: 1rem;
+    justify-content: center;
+    @media screen and (max-width: nth($breakpoint, 4)) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @media screen and (max-width: nth($breakpoint, 1)) {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .dashboard-list-item {
+      a {
+        display: block;
+      }
+    }
+  }
+  .index-section-service {
+    
+    background: 
+      url('@/assets/images/index-service-section-bg-top.png') top left / 100% 88px,
+      url('@/assets/images/index-service-section-bg-bottom.png') bottom left / 100% 88px,
+      linear-gradient(180deg, transparent 0%, transparent 87px, $color-white 87px, $color-white calc(100% - 88px) , transparent calc(100% - 88px), transparent 100%);
+    ;
+    background-repeat: no-repeat;
+    margin-left: calc(((1440px - 100dvw) / 2) - 4rem);
+    width: 100dvw;
+    padding: 5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    text-align: center;
+    @media screen and (max-width: nth($breakpoint, 5)) {
+      margin-left: -4rem;
+      width: calc(100% + 8rem);
+    }
+    @media screen and (max-width: nth($breakpoint, 3)) {
+      margin-left: -1rem;
+      width: calc(100% + 2rem);
+      padding: 5rem 1rem;
+    }
+    .category-image-list {
+      margin-top: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: nth($breakpoint, 4);
+      margin-left: auto;
+      margin-right: auto;
+      @media screen and (max-width: nth($breakpoint, 3)) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+      }
+    }
+  }
+  .index-section-service-title {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      left: 50%;
+      width: 13rem;
+      height: 9rem;
+      transform: translate3d(-50%, 0, 0);
+      background:
+        url('@/assets/images/index-service-section-title.svg')
+        top left/ 100% auto /* position / size */
+        no-repeat                /* repeat */
+        // fixed                    /* attachment */
+        // padding-box              /* origin */
+        // content-box              /* clip */
+        // $color-bg;
+        ;
+    }
+  }
+  .swiper-container--index-service {
+    position: relative;
+    height: 325px;
+    margin-top: 5rem;
+    overflow: hidden;
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: initial;;
+    }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: initial;;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: $color-primary;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      text-align: center;
+      &:after {
+        display: none;
+      }
+      svg {
+        width: 1rem;
+        height: 1rem;
+        path {
+          fill: darken($color-primary, 30%);
+        }
+      }
+    }
+    .custom-swiper-paginav {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      margin-top: -3rem;
+      .swiper-pagination  {
+        width: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: initial;
+        bottom: initial;
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .index-section-lists {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: end;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    background: url('@/assets/images/lists-deco.svg') right bottom no-repeat;
+    background-size: 25% auto;
+    @media screen and (max-width: nth($breakpoint, 2)) {
+      display: block;
+      background-size: 50% auto;
+      background-position: right -1.5rem bottom;
+      > div {
+        margin-bottom: 3rem;
+      }
+    }
+    .newtest {
+      grid-column: 2 / 7;
+      @media screen and (max-width: nth($breakpoint, 3)) {
+        grid-column: 1 / 7;
+      }
+    }
+    .hotest {
+      grid-column: 7 / 12;
+      @media screen and (max-width: nth($breakpoint, 3)) {
+        grid-column: 7 / -1;
+      }
+    }
+    .general-list-item-title {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    h3 {
+      position: relative;
+      margin-bottom: 1rem;
+      span {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -1.25rem;
+          left: -1.25rem;
+          width: 2rem;
+          height: 2rem;
+          background: url('@/assets/images/page-title-deco.svg') center center /
+            contain /* position / size */ no-repeat /* repeat */
+            // fixed                    /* attachment */
+            // padding-box              /* origin */
+            // content-box              /* clip */
+            // red; ;
+        }
+      }
+    }
+    .#{$prefix}-btn {
+      width: 100%;
+      border-radius: 3rem;
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+  .index-section-wordcloud {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+    background: url('@/assets/images/index-keywords-deco.svg') right bottom no-repeat;
+    background-size: 20% auto;
+    @media screen and (max-width: nth($breakpoint, 3)) {
+        display: block;
+        background-size: 40% auto;
+    }
+    h3 {
+      grid-column: 2 / 5;
+      grid-row: 1 / 2;
+      position: relative;
+      @media screen and (max-width: nth($breakpoint, 3)) {
+        text-align: center;
+      }
+      span {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -1.25rem;
+          left: -1.25rem;
+          width: 2rem;
+          height: 2rem;
+          background: url('@/assets/images/page-title-deco.svg') center center /
+            contain /* position / size */ no-repeat /* repeat */
+            // fixed                    /* attachment */
+            // padding-box              /* origin */
+            // content-box              /* clip */
+            // red; ;
+        }
+      }
+    }
+    .cloud {
+      margin-top: 4rem;
+      grid-column: 2 / -2;
+      grid-row: 1 / 3;
+      height: 300px;
+      @media screen and (max-width: nth($breakpoint, 3)) {
+        margin-top: 0;
+      }
+      .btn-cloud {
+        position: relative;
+        color: $color-black;
+        span {
+          position: relative;
+          z-index: 1;
+          font-family: 'Noto Sans TC';
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background-color: transparent;
+        }
+        &.level1 {
+          &:after {
+            background-color: #FCDBE1;
+          }
+        }
+        &.level2 {
+          &:after {
+            background-color: lighten($color-primary, 40%);
+          }
+        }
+        &.level3 {
+          &:after {
+            background-color: rgba(#79DDF2, 0.3);
+          }
+        }
+        &.level4 {
+          &:after {
+            background-color: rgba(#36558F, 0.2);
+          }
+        }
+        &.level5 {
+          &:after {
+            background-color: rgba(#1CDBA6, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
